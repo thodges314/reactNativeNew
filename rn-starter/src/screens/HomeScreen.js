@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const HomeScreen = () => {
   return (
@@ -9,6 +9,9 @@ const HomeScreen = () => {
         onPress={()=>console.log('Button Pressed!')}
         title='Go to Components Demo'
       />
+      <TouchableOpacity>
+        <Text>Go to List Demo</Text>
+      </TouchableOpacity>
     </View>
   )
 };
