@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19004,
-  "packagerPid": 1672,
+  "packagerPort": 19003,
+  "packagerPid": 10871,
   "expoServerNgrokUrl": "https://s3-ab9.anonymous.rn-starter.exp.direct",
   "packagerNgrokUrl": "https://packager.s3-ab9.anonymous.rn-starter.exp.direct",
-  "ngrokPid": 1761
+  "ngrokPid": 10960
 }
