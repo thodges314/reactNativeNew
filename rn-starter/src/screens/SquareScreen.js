@@ -12,14 +12,18 @@ const SquareScreen = () => {
 	const formatColour = () => `rgb(${red}, ${green}, ${blue})`
 
 	const setColour = (colour, change) => {
-		if (colour === 'red' && red + change <= 255 && red + change >= 0) {
-			setRed(red + change)
-		}
-		if (colour === 'green' && green + change <= 255 && green + change >= 0) {
-			setGreen(green + change)
-		}
-		if (colour === 'blue' && blue + change <= 255 && blue + change >= 0) {
-			setBlue(blue + change)
+		switch(colour){
+			case 'red':
+				(red + change <= 255 && red + change >= 0) && setRed(red + change)
+				return
+			case 'green':
+				(green + change <= 255 && green + change >= 0) && setGreen(green + change)
+				return
+			case 'blue':
+				(blue + change <= 255 && blue + change >= 0) && setBlue(blue + change)
+				return
+			default: 
+				return
 		}
 	}
 
