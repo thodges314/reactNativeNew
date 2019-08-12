@@ -7,13 +7,13 @@ const COLOUR_INCREMENT = 5
 const setColour = (value, change) => (value + change <= 255 && value + change >= 0) ? value + change : value
 
 const reducer = (state, action) =>{
-	switch (action.colourToChange){
-		case 'red':
-			return {...state, red: setColour(state.red, action.amount)}
-		case 'green':
-			return {...state, green: setColour(state.green, action.amount)}
-		case 'blue':
-			return {...state, blue: setColour(state.blue, action.amount)}
+	switch (action.type){
+		case 'change_red':
+			return {...state, red: setColour(state.red, action.payload)}
+		case 'change_green':
+			return {...state, green: setColour(state.green, action.payload)}
+		case 'change_blue':
+			return {...state, blue: setColour(state.blue, action.payload)}
 		default:
 			state
 	}
@@ -28,20 +28,20 @@ const SquareScreen = () => {
 		<View>
 			<ColourCounter
 				colour='Red'
-				onIncrease={()=>dispatch({colourToChange: 'red', amount: COLOUR_INCREMENT}) }
-				onDecrease={()=>dispatch({colourToChange: 'red', amount: -COLOUR_INCREMENT}) }
+				onIncrease={()=>dispatch({type: 'change_red', payload: COLOUR_INCREMENT}) }
+				onDecrease={()=>dispatch({type: 'change_red', payload: -COLOUR_INCREMENT}) }
 				value={red}
 			/>
 			<ColourCounter
 				colour='Green'
-				onIncrease={()=>dispatch({colourToChange: 'green', amount: COLOUR_INCREMENT}) }
-				onDecrease={()=>dispatch({colourToChange: 'green', amount: -COLOUR_INCREMENT}) }
+				onIncrease={()=>dispatch({type: 'change_green', payload: COLOUR_INCREMENT}) }
+				onDecrease={()=>dispatch({type: 'change_green', payload: -COLOUR_INCREMENT}) }
 				value={green}
 			/>
 			<ColourCounter
 				colour='Blue'
-				onIncrease={()=>dispatch({colourToChange: 'blue', amount: COLOUR_INCREMENT}) }
-				onDecrease={()=>dispatch({colourToChange: 'blue', amount: -COLOUR_INCREMENT}) }
+				onIncrease={()=>dispatch({type: 'change_blue', payload: COLOUR_INCREMENT}) }
+				onDecrease={()=>dispatch({type: 'change_blue', payload: -COLOUR_INCREMENT}) }
 				value={blue}
 			/>
 			<Text>{formatColour()}</Text>
