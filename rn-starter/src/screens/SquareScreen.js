@@ -4,7 +4,7 @@ import ColourCounter from '../components/ColourCounter'
 
 const COLOUR_INCREMENT = 5
 
-const setColour = (value, change) => (value + change <= 255 && value + change >= 0) ? value + change : 0
+const setColour = (value, change) => (value + change <= 255 && value + change >= 0) ? value + change : value
 
 const reducer = (state, action) =>{
 	switch (action.colourToChange){
