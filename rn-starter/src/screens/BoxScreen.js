@@ -13,9 +13,9 @@ const BoxScreen = () => {
 
 const styles = StyleSheet.create({
 	viewStyle: {
-		borderWidth: 3,
-		borderColor: 'black',
-		height: 400,
+		// borderWidth: 3,
+		// borderColor: 'black',
+		height: 200,
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'flex-start'
@@ -33,15 +33,9 @@ const styles = StyleSheet.create({
 		backgroundColor: 'green',
 		height: 100,
 		width: 100,
+		alignSelf: "flex-end"
 		// top: 20
-		marginTop: 100
-		// fontSize: 18,
-		// position: 'absolute',
-		// top:0,
-		// bottom: 0,
-		// left: 0,
-		// right: 0
-		// ...StyleSheet.absoluteFillObject
+		// marginTop: 100
 	},
 	textThreeStyle:{
 		borderWidth: 3,
